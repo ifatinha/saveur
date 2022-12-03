@@ -1,0 +1,122 @@
+.header {
+    font-family: 'Playfair Display', serif;
+    flex-direction: column;
+    gap: 20px;
+    padding: 60px 0 35px;
+    width: 100%;
+}
+
+.menu a {
+    color: var(--white-02);
+    font-family: 'Playfair Display', serif;
+    line-height: 20px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.menu a::after {
+    background-color: var(--yellow-01);
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 5px;
+    transition: .3s;
+    width: 0;
+}
+
+.menu a:hover {
+    color: var(--yellow-01);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+.header-nav {
+    width: 100%;
+}
+
+.header-nav::before {
+    background: url("../../images/menu-bd-top.png") no-repeat center center;
+    content: "";
+    display: block;
+    height: 14px;
+    width: 100%;
+}
+
+.header-nav::after {
+    background: url("../../images/menu-bd-bot.png") no-repeat center center;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+}
+
+.header-nav ul {
+    gap: 20px;
+    justify-content: center;
+}
+
+.header-nav ul a {
+    display: inline-block;
+    font-size: var(--small-01);
+    letter-spacing: 4px;
+    padding: 15px 35px;
+    text-align: center;
+}
+
+.menu-mobile {
+    background: url("../../images/menus.png") no-repeat center;
+    background-size: cover;
+    display: none;
+    cursor: pointer;
+    height: 48px;
+    transition: .3s;
+    width: 48px;
+    z-index: 1;
+}
+
+.nav-mobile {
+    background-color: var(--black-01);
+    border-top: 1px solid var(--black-02);
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+.nav-mobile li {
+    width: 100%;
+}
+
+.nav-mobile li a {
+    display: inline-block;
+    font-size: var(--small-02);
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.menu-mobile:hover .nav-mobile {
+    display: block;
+}
+
+@media screen and (max-width: 700px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .header-logo {
+        width: 180px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+}

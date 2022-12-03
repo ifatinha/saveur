@@ -1,0 +1,34 @@
+.principal {
+    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url("../../images/bg2.jpg") no-repeat center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    height: 575px;
+    text-align: center;
+    width: 100%;
+}
+
+.principal :is(.principal-titulo, .principal-paragrafo) {
+    letter-spacing: -1px;
+}
+
+.principal-titulo {
+    color: var(--white-02);
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: var(--big-01);
+    line-height: 65px;
+    margin-bottom: 10px;
+}
+
+.principal-img {
+    margin-bottom: 10px;
+}
+
+.principal-paragrafo {
+    color: var(--white-01);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--medium-01);
+    margin-bottom: 20px;
+}
