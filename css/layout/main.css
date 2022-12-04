@@ -1,5 +1,5 @@
 .principal {
-    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url("../../images/bg2.jpg") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, .15), rgba(0, 0, 0, .15)), url("../../images/bg21.jpg") no-repeat center;
     background-size: cover;
     flex-direction: column;
     justify-content: center;
@@ -17,7 +17,7 @@
     font-family: 'Playfair Display', serif;
     font-weight: 500;
     font-style: italic;
-    font-size: var(--big-01);
+    font-size: var(--big-58);
     line-height: 65px;
     margin-bottom: 10px;
 }
@@ -29,6 +29,20 @@
 .principal-paragrafo {
     color: var(--white-01);
     font-family: 'Montserrat', sans-serif;
-    font-size: var(--medium-01);
+    font-size: var(--medium-22);
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .principal {
+        height: 300px;
+    }
+
+    .principal-titulo {
+        font-size: var(--medium-22);
+    }
+
+    .principal-paragrafo {
+        font-size: var(--small-14);
+    }
 }

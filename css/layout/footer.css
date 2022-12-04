@@ -1,0 +1,39 @@
+.footer-container {
+    background-color: var(--black-02);
+    padding: 60px 2%;
+    text-align: center;
+}
+
+.footer-container ul {
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-container ul a {
+    color: var(--white-02);
+    font-size: var(--medium-22);
+    transition: .5s;
+}
+
+.footer-container ul a:hover i {
+    transform: scale(1.1);
+}
+
+.footer-citacao {
+    color: var(--white-02);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.footer-citacao q {
+    font-size: var(--medium-18);
+    line-height: 27px;
+}
+
+.footer-citacao p {
+    font-size: var(--small-12);
+    margin-top: 5px;
+}
+
+/*https://www.thematicwebs.com/demo/wp/saveur/#home*/

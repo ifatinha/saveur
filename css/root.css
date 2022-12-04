@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
 /* CSS Reset e estilos gerais */
 @import "base/minireset.min.css";
@@ -9,6 +9,11 @@
 @import "base/cores.css";
 @import "base/tipografia.css";
 
+/* Animações */
+@import "base/animacao.css";
+
 /* CSS Layout */
 @import "layout/header.css";
 @import "layout/main.css";
+@import "layout/galeria.css";
+@import "layout/footer.css";

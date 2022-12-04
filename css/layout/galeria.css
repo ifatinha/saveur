@@ -1,0 +1,222 @@
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "galeria-bg1 galeria-bg1 horario galeria-bg2"
+        "galeria-bg1 galeria-bg1 galeria-bg3 servicos";
+    gap: 10px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.galeria-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: .7s ease;
+    width: 100%;
+    z-index: 2;
+}
+
+.galeria img {
+    display: block;
+    object-fit: cover;
+}
+
+.galeria-bg1 {
+    background-color: var(--brown-02);
+    grid-area: galeria-bg1;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay-bg1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 30px 30px;
+    opacity: 0;
+}
+
+.overlay-bg1 :is(.overlay-bg1-titulo, .overlay-bg1-paragrafo) {
+    color: var(--white-01);
+    font-family: 'Playfair Display', serif;
+}
+
+.overlay-bg1-titulo {
+    font-size: var(--medium-32);
+    font-style: italic;
+}
+
+.overlay-bg1-paragrafo {
+    font-size: var(--small-14);
+    line-height: 20px;
+}
+
+.galeria-bg1:hover .overlay-bg1 {
+    opacity: 1;
+}
+
+.horario {
+    grid-area: horario;
+}
+
+.galeria-card {
+    align-items: flex-start;
+    background-color: var(--brown-02);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.galeria-card :is(span, h2, li, p) {
+    color: var(--white-01);
+}
+
+.card-span {
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-10);
+    font-weight: 100;
+    font-style: italic;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+
+.card-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: var(--medium-22);
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    line-height: 25px;
+    margin: 20px 0;
+}
+
+.galeria-card li {
+    font-size: var(--small-14);
+    line-height: 18px;
+}
+
+.card-overlay {
+    color: var(--white-01);
+    opacity: 0;
+    padding: 20px 10px;
+}
+
+.galeria-bg2:hover .card-overlay,
+.galeria-bg3:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay-titulo {
+    border-bottom: 1px solid var(--white-02);
+    display: flex;
+    font-style: italic;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+.card-overlay-titulo p {
+    font-family: 'Playfair Display', serif;
+    line-height: 16px;
+}
+
+.card-overlay-titulo span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: var(--small-12);
+    line-height: 16px;
+}
+
+.card-overlay-descricao {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.card-overlay-ingredientes {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-12);
+    font-style: italic;
+    line-height: 18px;
+}
+
+.horario li {
+    display: flex;
+    justify-content: space-between;
+    max-width: 180px;
+}
+
+.horario li span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.galeria-bg2 {
+    grid-area: galeria-bg2;
+    background-color: brown;
+}
+
+.galeria-bg3 {
+    grid-area: galeria-bg3;
+    background-color: brown;
+}
+
+.servicos {
+    background-color: var(--brown-02);
+    grid-area: servicos;
+}
+
+.servicos-paragrafo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.servicos ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.servicos li {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .galeria {
+        grid-template-areas:
+            "galeria-bg1 galeria-bg1 galeria-bg1 galeria-bg1"
+            "horario horario galeria-bg2 galeria-bg2"
+            "galeria-bg3 galeria-bg3 servicos servicos";
+    }
+
+    .overlay-bg1 {
+        opacity: 1;
+        padding: 10px;
+    }
+
+    .card-overlay {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "galeria-bg1"
+            "horario"
+            "galeria-bg2"
+            "galeria-bg3"
+            "servicos";
+    }
+}

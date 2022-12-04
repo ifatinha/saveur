@@ -10,3 +10,40 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+.btn-padrao {
+    border: 2px solid rgba(255, 255, 255, .7);
+    color: var(--white-02);
+    display: inline-block;
+    font-size: var(--small-12);
+    letter-spacing: 5px;
+    line-height: 15px;
+    overflow: hidden;
+    padding: 15px 20px;
+    position: relative;
+    text-transform: uppercase;
+    transition: .3s;
+    z-index: 1;
+}
+
+.btn-padrao::before {
+    background-color: var(--brown-01);
+    content: "";
+    display: block;
+    height: 300%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: .5s ease;
+    width: 0;
+    z-index: -1;
+}
+
+.btn-padrao:hover::before {
+    width: 100%;
+}
+
+.relative {
+    position: relative;
+}

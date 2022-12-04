@@ -59,7 +59,7 @@
 
 .header-nav ul a {
     display: inline-block;
-    font-size: var(--small-01);
+    font-size: var(--small-12);
     letter-spacing: 4px;
     padding: 15px 35px;
     text-align: center;
@@ -73,7 +73,7 @@
     height: 48px;
     transition: .3s;
     width: 48px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .nav-mobile {
@@ -92,7 +92,7 @@
 
 .nav-mobile li a {
     display: inline-block;
-    font-size: var(--small-02);
+    font-size: var(--small-14);
     padding: 15px 20px;
     width: 100%;
 }
