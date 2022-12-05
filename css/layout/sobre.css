@@ -1,31 +1,64 @@
 .sobre {
-    background-color: darkblue;
+    align-content: start;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
         "paragrafo paragrafo chef1 restaurante1"
         "paragrafo paragrafo restaurante2 chef2"
         "horario servicos chef3 restaurante3";
+    grid-template-rows: repeat(3, 250px);
+    grid-auto-rows: 250px;
     gap: 10px;
+
+    background-color: darkblue;
 }
 
-.sobre-paragrafo {
+.sobre-descricao {
     background-color: var(--white-02);
+    background-size: cover;
     grid-area: paragrafo;
+    padding: 50px;
+}
+
+.sobre-descricao h1 {
+    color: var(--black-02);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--medium-32);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 35px;
+    margin: 30px 0 20px;
+}
+
+.sobre-descricao p {
+    font-family: 'Playfair Display', serif;
+    font-size: var(--medium-30);
+    letter-spacing: -1px;
+    line-height: 45px;
+    margin-bottom: 22px;
 }
 
 .chef1 {
+    background: url("../../images/chef1.jpg") no-repeat center;
+    background-size: cover;
     grid-area: chef1;
 }
 
 .restaurante1 {
+    background: url("../../images/restaurante1.jpg") no-repeat center;
+    background-size: cover;
     grid-area: restaurante1;
 }
 
 .chef2 {
+    background: url("../../images/chef2.jpg") no-repeat center;
+    background-size: cover;
     grid-area: chef2;
 }
 
 .restaurante2 {
+    background: url("../../images/restaurante2.jpg") no-repeat center;
+    background-size: cover;
     grid-area: restaurante2;
 }
 
@@ -38,15 +71,20 @@
 }
 
 .chef3 {
+    background: url("../../images/chef3.jpg") no-repeat center;
+    background-size: cover;
     grid-area: chef3;
 }
 
 .restaurante3 {
+    background: url("../../images/restaurante3.jpg") no-repeat center;
+    background-size: cover;
     grid-area: restaurante3;
 }
 
 @media screen and (max-width: 800px) {
     .sobre {
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "paragrafo paragrafo"
             "chef1 restaurante1"
@@ -58,6 +96,7 @@
 
 @media screen and (max-width: 700px) {
     .sobre {
+        grid-template-columns: 1fr;
         grid-template-areas:
             "paragrafo"
             "chef1"

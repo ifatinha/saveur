@@ -11,7 +11,7 @@
     flex-wrap: wrap;
 }
 
-.btn-padrao {
+.btn-principal {
     border: 2px solid rgba(255, 255, 255, .7);
     color: var(--white-02);
     display: inline-block;
@@ -26,7 +26,7 @@
     z-index: 1;
 }
 
-.btn-padrao::before {
+.btn-principal::before {
     background-color: var(--brown-01);
     content: "";
     display: block;
@@ -40,10 +40,107 @@
     z-index: -1;
 }
 
-.btn-padrao:hover::before {
+.btn-principal:hover::before {
     width: 100%;
 }
 
 .relative {
     position: relative;
+}
+
+/* Card da galeria */
+.galeria-card {
+    background-color: var(--brown-02);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.galeria-card :is(span, h2, li, p) {
+    color: var(--white-01);
+}
+
+.card-span {
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-10);
+    font-weight: 100;
+    font-style: italic;
+    line-height: 10px;
+    text-transform: uppercase;
+}
+
+.card-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: var(--medium-22);
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    line-height: 25px;
+    margin: 20px 0;
+}
+
+.galeria-card li {
+    display: flex;
+    font-size: var(--small-14);
+    justify-content: space-between;
+    line-height: 18px;
+    max-width: 200px;
+}
+
+.galeria-card li span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.galeria-card-paragrafo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+    margin-bottom: 10px;
+}
+
+.lista-servicos {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.lista-servicos li {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+/* Patterns Button */
+.btn-padrao {
+    background-color: var(--brown-04);
+    border-radius: 20px;
+    color: var(--white-02);
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+    letter-spacing: 6px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 14px 28px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.btn-padrao::before {
+    background-color: var(--brown-03);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all .5s;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-padrao:hover::before {
+    transform: translateX(0);
 }
