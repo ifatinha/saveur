@@ -1,0 +1,72 @@
+.sobre {
+    background-color: darkblue;
+    display: grid;
+    grid-template-areas:
+        "paragrafo paragrafo chef1 restaurante1"
+        "paragrafo paragrafo restaurante2 chef2"
+        "horario servicos chef3 restaurante3";
+    gap: 10px;
+}
+
+.sobre-paragrafo {
+    background-color: var(--white-02);
+    grid-area: paragrafo;
+}
+
+.chef1 {
+    grid-area: chef1;
+}
+
+.restaurante1 {
+    grid-area: restaurante1;
+}
+
+.chef2 {
+    grid-area: chef2;
+}
+
+.restaurante2 {
+    grid-area: restaurante2;
+}
+
+.sobre-horario {
+    grid-area: horario;
+}
+
+.sobre-servicos {
+    grid-area: servicos;
+}
+
+.chef3 {
+    grid-area: chef3;
+}
+
+.restaurante3 {
+    grid-area: restaurante3;
+}
+
+@media screen and (max-width: 800px) {
+    .sobre {
+        grid-template-areas:
+            "paragrafo paragrafo"
+            "chef1 restaurante1"
+            "restaurante2 chef2"
+            "horario servicos"
+            "chef3 restaurante3";
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .sobre {
+        grid-template-areas:
+            "paragrafo"
+            "chef1"
+            "restaurante1"
+            "restaurante2"
+            "chef2"
+            "horario"
+            "servicos"
+            "chef3"
+            "restaurante3";
+    }
+}
