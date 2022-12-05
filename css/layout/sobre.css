@@ -7,10 +7,8 @@
         "paragrafo paragrafo restaurante2 chef2"
         "horario servicos chef3 restaurante3";
     grid-template-rows: repeat(3, 250px);
-    grid-auto-rows: 250px;
+    grid-auto-rows: 300px;
     gap: 10px;
-
-    background-color: darkblue;
 }
 
 .sobre-descricao {
@@ -91,6 +89,21 @@
             "restaurante2 chef2"
             "horario servicos"
             "chef3 restaurante3";
+        grid-template-rows: 300px;
+    }
+
+    .sobre-descricao {
+        padding: 15px;
+    }
+
+    .sobre-descricao h1 {
+        margin: 20px 0;
+    }
+
+    .sobre-descricao p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: var(--medium-18);
+        line-height: normal;
     }
 }
 
@@ -107,5 +120,12 @@
             "servicos"
             "chef3"
             "restaurante3";
+        grid-template-rows: 350px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sobre {
+        grid-template-rows: 380px;
     }
 }
