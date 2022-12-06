@@ -55,51 +55,9 @@
     grid-area: horario;
 }
 
-.card-overlay {
-    color: var(--white-01);
-    opacity: 0;
-    padding: 20px 10px;
-}
-
 .galeria-bg2:hover .card-overlay,
 .galeria-bg3:hover .card-overlay {
     opacity: 1;
-}
-
-.card-overlay-titulo {
-    border-bottom: 1px solid var(--white-02);
-    display: flex;
-    font-style: italic;
-    justify-content: space-between;
-    margin-bottom: 25px;
-    padding-bottom: 5px;
-    width: 100%;
-}
-
-.card-overlay-titulo p {
-    font-family: 'Playfair Display', serif;
-    line-height: 16px;
-}
-
-.card-overlay-titulo span {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: var(--small-12);
-    line-height: 16px;
-}
-
-.card-overlay-descricao {
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--small-14);
-    line-height: 20px;
-    margin-bottom: 10px;
-}
-
-.card-overlay-ingredientes {
-    font-family: 'Montserrat', sans-serif;
-    font-size: var(--small-12);
-    font-style: italic;
-    line-height: 18px;
 }
 
 .galeria-bg2 {

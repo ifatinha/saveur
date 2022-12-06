@@ -1,5 +1,4 @@
 .menu-galeria {
-    background-color: purple;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -8,29 +7,57 @@
         "menu1 menu1 menu2 menu2"
         "img5 img6 img7 img8";
 
-    /* grid-template-rows: repeat(4, 300px); */
-    /* grid-auto-rows: 250px; */
+    grid-template-rows: 300px 2fr 300px;
+    grid-auto-rows: 300px;
     gap: 10px;
 }
 
 .menu-galeria div {
-    background-color: palevioletred;
+    background-size: cover;
 }
 
 .img1 {
+    background: url("../../images/menu1.jpg") no-repeat center;
     grid-area: img1;
 }
 
+.overlay-hover:hover .card-overlay {
+    opacity: 1;
+}
+
 .img2 {
+    background: url("../../images/menu2.jpg") no-repeat center;
     grid-area: img2;
 }
 
 .img3 {
+    background: url("../../images/menu3.jpg") no-repeat center;
     grid-area: img3;
 }
 
 .img4 {
+    background: url("../../images/menu4.jpg") no-repeat center;
     grid-area: img4;
+}
+
+.img5 {
+    background: url("../../images/menu5.jpg") no-repeat center;
+    grid-area: img5;
+}
+
+.img6 {
+    background: url("../../images/menu6.jpg") no-repeat center;
+    grid-area: img6;
+}
+
+.img7 {
+    background: url("../../images/menu7.jpg") no-repeat center;
+    grid-area: img7;
+}
+
+.img8 {
+    background: url("../../images/menu8.jpg") no-repeat center;
+    grid-area: img8;
 }
 
 .menu1 {
@@ -41,20 +68,49 @@
     grid-area: menu2;
 }
 
-.img5 {
-    grid-area: img5;
+.menu-content {
+    background-color: var(--white-02);
+    box-shadow: 0px 2px 6px 0 var(--black-03);
+    padding: 50px;
 }
 
-.img6 {
-    grid-area: img6;
+.menu-content h1 {
+    color: var(--black-02);
+    font-family: Playfair Display;
+    font-size: var(--medium-32);
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -2px;
+    line-height: 35px;
+    margin-bottom: 40px;
 }
 
-.img7 {
-    grid-area: img7;
+.menu-content dl {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.img8 {
-    grid-area: img8;
+.menu-content dt {
+    align-items: center;
+    display: flex;
+    font-size: var(--medium-18);
+    font-weight: 700;
+    justify-content: space-between;
+    line-height: 22px;
+}
+
+.menu-content .prato-nome {
+    color: var(--black-02);
+}
+
+.menu-content .prato-preco {
+    color: var(--brown-01);
+    font-style: italic;
+}
+
+.menu-content dd {
+    font-size: var(--medium-14);
+    line-height: 22px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 800px) {
@@ -68,8 +124,15 @@
             "img5 img6"
             "img7 img8";
 
-        /* grid-template-rows: repeat(4, 300px); */
-        /* grid-auto-rows: 250px; */
+        grid-template-rows: repeat(2, 300px) 1fr 1fr repeat(2, 300px);
+    }
+
+    .menu-content {
+        padding: 50px;
+    }
+
+    .menu-content h1 {
+        margin-bottom: 20px;
     }
 }
 
@@ -87,8 +150,10 @@
             "img6"
             "img7"
             "img8";
+        grid-template-rows: repeat(4, 300px) 1fr 1fr repeat(4, 300px);
+    }
 
-        /* grid-template-rows: repeat(4, 300px); */
-        /* grid-auto-rows: 250px; */
+    .menu-content {
+        padding: 10px;
     }
 }
