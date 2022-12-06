@@ -80,6 +80,53 @@
     grid-area: restaurante3;
 }
 
+.chef-nome {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    bottom: 10px;
+    border-left: 2px solid rgba(255, 255, 255, .5);
+    font-family: Playfair Display;
+    left: 20px;
+    position: absolute;
+    padding: 8px 0 8px 20px;
+    width: 90%;
+}
+
+.chef-nome :is(h2, p) {
+    color: var(--white-02);
+    text-shadow: 1px 1px 2px var(--black-02);
+}
+
+.chef-nome h2 {
+    font-size: var(--medium-22);
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 3px;
+}
+
+.chef-nome p {
+    font-size: var(--small-14);
+    font-style: italic;
+}
+
+.overlay-restaurante {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.overlay-restaurante a {
+    color: var(--white-02);
+    display: inline-block;
+    font-size: var(--big-38);
+}
+
+.restaurante:hover .overlay-restaurante {
+    opacity: 1;
+}
+
 @media screen and (max-width: 800px) {
     .sobre {
         grid-template-columns: 1fr 1fr;
@@ -124,7 +171,7 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 360px) {
     .sobre {
         grid-template-rows: 380px;
     }

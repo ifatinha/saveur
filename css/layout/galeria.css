@@ -12,17 +12,6 @@
     width: 100%;
 }
 
-.galeria-overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    transition: .7s ease;
-    width: 100%;
-    z-index: 2;
-}
-
 .galeria img {
     display: block;
     object-fit: cover;
