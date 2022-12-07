@@ -18,3 +18,8 @@ body {
 a {
     text-decoration: none;
 }
+
+iframe {
+    height: 100%;
+    width: 100%;
+}

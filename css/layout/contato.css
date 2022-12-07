@@ -1,35 +1,159 @@
 .contato {
-    background-color: purple;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    /* grid-template-areas:
-        "formulario formulario mapa mapa"
-        "formulario formulario orcamento info-contato"; */
-    /* grid-template-rows: repeat(2, 280px);
-    grid-auto-rows: 280px; */
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+        "formulario mapa mapa"
+        "formulario orcamento contato";
+    grid-template-rows: repeat(2, 280px);
+    grid-auto-rows: 280px;
 }
 
 .contato-formulario {
     background-color: var(--white-02);
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-area: formulario;
+    padding: 50px;
+}
+
+.contato-formulario h1 {
+    color: var(--black-02);
+    font-family: 'Playfair Display', serif;
+    font-size: var(--medium-30);
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.formulario,
+.item-formulario {
+    width: 100%;
+}
+
+.item-formulario {
+    margin-bottom: 15px;
+}
+
+.item-formulario :is(input, textarea) {
+    background: transparent;
+    border: 2px solid transparent;
+    border-bottom: 1px solid var(--black-02);
+    font-family: 'Playfair Display', serif;
+    font-size: var(--small-14);
+    line-height: 20px;
+    outline: none;
+    padding: 16px 20px;
+    transition: .2s ease;
+    width: 100%;
+}
+
+.item-formulario :is(input:focus, textarea:focus) {
+    border-left: 2px solid var(--black-02);
+}
+
+.item-formulario a {
+    width: 100%;
 }
 
 .contato-mapa {
-    background-color: darkgreen;
-    grid-column: span 2;
+    grid-area: mapa;
 }
 
 .contato-orcamento {
-    background-color: darkorange;
+    background: url("../../images/food1.jpg") no-repeat center;
+    background-size: cover;
+    grid-area: orcamento;
+}
+
+.orcamento-card {
+    align-items: flex-start;
+    color: var(--white-02);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 20px;
+}
+
+.orcamento-card h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: var(--medium-18);
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+.orcamento-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
 }
 
 .contato-info {
-    background-color: darkred;
+    background-color: var(--black-02);
+    display: flex;
+    flex-direction: column;
+    grid-area: contato;
+    justify-content: center;
+    padding: 20px;
 }
 
-@media screen and (max-width: 600px) {
-    /* .contato{
-        grid-template-rows: repeat(auto, 280px);
-    } */
+.contato-info :is(span, a, address) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+    opacity: .6;
+}
+
+.contato-info :is(span, h3, a, address) {
+    color: var(--white-02);
+}
+
+.contato-info span {
+    font-size: var(--small-10);
+    font-style: italic;
+    font-weight: 100;
+    letter-spacing: 4px;
+    line-height: 9px;
+    opacity: .6;
+    text-transform: uppercase;
+}
+
+.contato-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 18px;
+    margin: 15px 0 5px 0;
+}
+
+.contato-info :is(a, address) {
+    font-size: var(--small-14);
+}
+
+@media screen and (max-width: 800px) {
+    .contato {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "formulario formulario"
+            "mapa mapa"
+            "orcamento contato";
+
+        grid-template-rows: 1fr repeat(2, 280px);
+    }
+
+    .contato-formulario {
+        padding: 10px;
+    }
+
+    .contato-formulario h1 {
+        font-size: var(--medium-22);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contato {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "formulario"
+            "mapa"
+            "orcamento"
+            "contato";
+    }
 }

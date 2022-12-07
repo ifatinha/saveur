@@ -46,11 +46,19 @@
         <article class="contato">
             <div class="contato-formulario">
                 <h1>Por favor, preencha o formulário para entrar em contato</h1>
-                <form action="./">
-                    <input type="text" placeholder="Seu nome">
-                    <input type="email" placeholder="Seu e-mail">
-                    <textarea name="messagem" id="" cols="30" rows="10" placeholder="Sua mensagem..."></textarea>
-                    <a href="./">Enviar</a>
+                <form action="./" class="formulario">
+                    <div class="item-formulario">
+                        <input type="text" placeholder="Seu nome">
+                    </div>
+                    <div class="item-formulario">
+                        <input type="email" placeholder="Seu e-mail">
+                    </div>
+                    <div class="item-formulario">
+                        <textarea name="messagem" id="" cols="30" rows="3" placeholder="Sua mensagem..."></textarea>
+                    </div>
+                    <div class="item-formulario">
+                        <a href="./" class="btn-padrao">Enviar</a>
+                    </div>
                 </form>
             </div>
 
@@ -60,12 +68,21 @@
                     style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>
             </div>
 
-            <div class="contato-orcamento">
-                
+            <div class="contato-orcamento relative">
+                <div class="overlay orcamento-card">
+                    <h2>Serviços de refeições</h2>
+                    <p>Preencha o formulário para solicitar um orçamento.</p>
+                </div>
             </div>
 
             <div class="contato-info">
-
+                <span>Informações de contato</span>
+                <h3>Telefone:</h3>
+                <a href="tel:+5583912345678">+55 (83) 91234-5678</a>
+                <h3>Email:</h3>
+                <a href="mailto:contato@saveur.com">contato@saveur.com</a>
+                <h3>Endereço:</h3>
+                <address>451 Lorem Ipsum, Serra Grande - Brasil</address>
             </div>
         </article>
     </div>
