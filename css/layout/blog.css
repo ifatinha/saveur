@@ -1,0 +1,28 @@
+.blog {
+    align-content: start;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+}
+
+.col-esquerda {
+    align-self: start;
+}
+
+.col-direita {}
+
+.publicacao-item {
+    background-color: var(--white-02);
+    margin-bottom: 10px;
+}
+
+.sidenav {
+    align-self: start;
+    background-color: var(--black-02);
+}
+
+@media screen and (max-width: 800px) {
+    .sidenav {
+        grid-column: 1 / -1;
+    }
+}
