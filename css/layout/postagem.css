@@ -1,0 +1,224 @@
+.postagem {
+    display: grid;
+    grid-template-columns: auto 300px;
+    grid-template-areas:
+        "postagem sidenav-postagem";
+    gap: 10px;
+}
+
+.postagem-container {
+    display: grid;
+    grid-area: postagem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+
+.postagem-publicacao {
+    background-color: var(--white-02);
+    padding: 30px;
+}
+
+.postagem-publicacao img {
+    display: block;
+    margin: 0 auto 30px;
+}
+
+.postagem-titulo {
+    color: var(--black-02);
+    font-family: Playfair Display;
+    font-style: italic;
+    font-size: var(--medium-32);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+.postagem-subtitulo {
+    color: var(--black-02);
+    font-family: Playfair Display;
+    font-style: italic;
+    font-size: var(--small-14);
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.postagem-publicacao :is(p, ul),
+.autor-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+}
+
+.postagem-publicacao :is(p, ul) {
+    line-height: 28px;
+    margin-bottom: 22px;
+}
+
+.postagem-publicacao :is(h1, h2, h3, h4, h5, h6) {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.postagem-publicacao h1 {
+    font-size: var(--medium-32);
+}
+
+.postagem-publicacao h2 {
+    font-size: var(--medium-30);
+}
+
+.postagem-publicacao h3 {
+    font-size: var(--medium-22);
+}
+
+.postagem-publicacao h4 {
+    font-size: var(--medium-18);
+}
+
+.postagem-publicacao h5 {
+    font-size: var(--small-14);
+}
+
+.postagem-publicacao h6 {
+    font-size: var(--small-12);
+    font-weight: bolder;
+}
+
+.postagem-lista-1 {
+    list-style: initial;
+    list-style-position: inside;
+}
+
+.postagem-lista-2 {
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+blockquote {
+    border-left: 4px solid var(--brown-04);
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+
+blockquote p.citacao {
+    color: var(--black-02);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--medium-22);
+    font-style: italic;
+    line-height: 44px;
+}
+
+.postagem-autor {
+    align-items: center;
+    background-color: var(--white-02);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.postagem-autor .autor-sobre {
+    max-width: 800px;
+}
+
+.autor-sobre h2,
+.postagem-comentarios h2 {
+    color: var(--black-02);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--medium-22);
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.postagem-comentarios {
+    background-color: var(--white-02);
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px;
+}
+
+.postagem-comentarios h2 {
+    margin-bottom: 20px;
+}
+
+.postagem-comentarios h3 {
+    color: var(--black-02);
+    font-size: var(--small-14);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.postagem-comentarios p {
+    font-size: var(--small-14);
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.comentario-form {
+    display: grid;
+    font-family: 'Montserrat', sans-serif;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.col-100 {
+    grid-column: 1 / -1;
+}
+
+.comentario-form-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.comentario-form-item label {
+    color: var(--black-04);
+    font-size: var(--small-14);
+    font-weight: 700;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.comentario-form-item :is(input, textarea) {
+    background-color: var(--white-04);
+    border: none;
+    border: 1px solid var(--white-05);
+    border-radius: 2px;
+    color: var(--black-03);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--small-14);
+    line-height: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.comentario-form a {
+    padding: 8px 20px;
+    max-width: 280px;
+}
+
+.sidenav-postagem {
+    align-self: start;
+    grid-area: sidenav-postagem;
+}
+
+@media screen and (max-width: 800px) {
+    .postagem {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "postagem"
+            "sidenav-postagem";
+    }
+
+    .postagem-autor {
+        justify-content: center;
+        text-align: center
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .comentario-form {
+        grid-template-columns: 1fr;
+    }
+}
